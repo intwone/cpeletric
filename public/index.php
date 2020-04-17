@@ -2,8 +2,8 @@
 session_start();
 
 if(isset($_SESSION['userid']) && !empty($_SESSION['userid'])) {
-	echo 'AREA RESTRITA';
+	header("location: ../src/pages/home.php");
 } else {
-	header("location: login.php");
+	header("location: ..src/pages/login.php");
 }
 ?>
