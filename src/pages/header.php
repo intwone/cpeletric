@@ -1,7 +1,15 @@
+<?php 
+session_start();
+require_once '../classes/Users.php';
+
+$user = new Users();
+$name = $user->getUsername();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>CP ELETRIC LOGON</title>
+	<title>CP ELETRIC HOME</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -19,7 +27,6 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/header.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/content-dashboard.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/all.min.css"> 
@@ -117,7 +124,7 @@
                 <i class="fa fa-user"></i>
               </span>
             </div>
-            <div class="username">PATRICIA TAVARES</div>
+            <div class="username"><?php echo $name; ?></div>
             <a href="logout.php">
               <div class="arrow-icon">
                 <span style="font-size: 17px; color: #fff;">
