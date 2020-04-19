@@ -50,20 +50,49 @@
     justify-content: center;
 }
 
-.info {
-    height: 100px;
-    width: 200px;
-    margin: 20px;
-    background-color: aqua;
-}
-
-.graphs {
+.div-father {
     display: flex;
-    justify-content: center;
 }
 
-.item {
-    width: 920px;
-    height: 200px;
-    background-color: aqua;
+.items {
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.brand {
+    display: flex;
+    font-size: 20px;
+}
+
+.container {
+    padding: 10px 0px;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.fixed-top {
+    padding: 10px 10px;
+}
+
+.user {
+    display: flex;
+}
+
+.username {
+    margin: 1px 0px 0px 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+a :hover {
+    color: #95a5a6;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.arrow-icon {
+    margin: -2px 7px 0px 17px;
 }
