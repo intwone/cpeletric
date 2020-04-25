@@ -4,6 +4,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     const container = document.querySelector('#chart');
     const data = new google.visualization.arrayToDataTable([
+
         ['Caracter', 'Ki'],
         ['Goku', 60000],
         ['Vegeta', 35000],

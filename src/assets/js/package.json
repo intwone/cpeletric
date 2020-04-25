@@ -1,17 +1,25 @@
 {
-    "name": "cp_electric",
-    "version": "1.0.0",
-    "description": "Sistema de Gerenciamento de Faturas de Energia Elétrica",
-    "main": "app.js",
-    "dependencies": {
-        "express": "^4.17.1",
-        "mysql": "^2.18.1",
-        "nodemon": "2.0.3"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Cassio Oliveira Silva",
-    "license": "MIT"
+  "name": "cpeletric",
+  "version": "1.0.0",
+  "description": "Sistema de gerencimento de faturas de energia elétrica",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intwone/cpeletric.git"
+  },
+  "author": "Cassio Oliveira Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intwone/cpeletric/issues"
+  },
+  "homepage": "https://github.com/intwone/cpeletric#readme"
 }
