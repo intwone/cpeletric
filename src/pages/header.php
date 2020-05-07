@@ -1,15 +1,21 @@
 <?php 
 session_start();
 require_once '../classes/Users.php';
+require_once '../classes/Invoices.php';
+
+$invoices = new Invoices();
+$invoices->amountSpentPerMonth();
+$refMonth = json_encode($invoices->getRefMonth());
+$totalValue = json_encode($invoices->getTotalValue());
 
 $user = new Users();
-$name = $user->getUsername();
+$name = $user->getName();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>CP ELETRIC HOME</title>
+	<title>CP ELECTRIC HOME</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -43,7 +49,7 @@ $name = $user->getUsername();
               <img src="../assets/images/flash.png" alt="Brand CPELETRIC" style="width: 30px; height: 30px;">
             </div>
             <div style="margin-left: 7px; margin-top: 2px; color: #fff;">
-              <span>CP ELETRIC</span>
+              <span>CP ELECTRIC</span>
             </div>
           </li>
         </div>

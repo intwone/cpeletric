@@ -110,6 +110,9 @@
         </div>  
       </div>
     </div>
+
+    <canvas id="myChart"></canvas>  
+    <?php require_once '../charts/chart-month-theater.php' ?>
   </div>
 </div>
 

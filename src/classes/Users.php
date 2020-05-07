@@ -5,7 +5,6 @@ class Users {
 
   private $name;
 
-
   /**
    * Checks if the user exist in database
    */
@@ -18,6 +17,7 @@ class Users {
 		$sql->execute();
 		
     if($sql->rowCount() > 0) {
+      echo 'ok';
       $data = $sql->fetch();
       $_SESSION['userid'] = $data['user_id'];
       $username = explode(" ", $data['user_name']);
@@ -26,7 +26,10 @@ class Users {
     }
   }
 
-  public function getUsername() {
+  /**
+   * Get the user name
+   */
+  public function getName() {
     return $this->name;
   }
 }

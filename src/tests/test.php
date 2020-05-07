@@ -1,10 +1,11 @@
 <?php
-require_once '../classes/Users.php';
+require_once '../classes/Invoices.php';
 
-$user = new Users();
+$invoices = new Invoices();
 
-$user->userLogin("pati.tav@gmail.com", "823fec7a2632ea7b498c1d0d11c11377");
-$name = $user->getUsername();
+$invoices->amountSpentPerMonth();
+$refMonth = json_encode($invoices->getRefMonth());
+$totalValue = json_encode($invoices->getTotalValue());
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,19 @@ $name = $user->getUsername();
   </head>
 
   <body>
-  <div class="username"><?php echo $name; ?></div>
+    <form action="" method="POST">
+      <input class="input100" type="text" name="email" placeholder="Email">
+      <input class="input100" type="password" name="pass" placeholder="Password">
+      <button class="login100-form-btn">
+        Login
+      </button>
+    </form>
+  <div class="username"><?php  print_r($refMonth); print_r($totalValue); ?></div>
+  <?php
+
+
+  ?>
   </body>
 </html>
+
 

@@ -1,7 +1,7 @@
  <?php
 session_start();
 
-$dsn = "mysql:dbname=system_management;host=localhost";
+$dsn = "mysql:dbname=system_management;host=cpeletric";
 $dbuser = "root";
 $operationalSystem = PHP_OS;
 global $pdoConnection;

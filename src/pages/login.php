@@ -14,7 +14,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>CP ELETRIC LOGON</title>
+	<title>CP ELECTRIC LOGON</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -45,7 +45,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])) {
 
 				<form method="POST" class="login100-form validate-form">
 					<span class="login100-form-title">
-						CP ELETRIC
+						CP ELECTRIC
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
