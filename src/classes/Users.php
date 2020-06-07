@@ -5,9 +5,6 @@ class Users {
 
   private $name;
 
-  /**
-   * Checks if the user exist in database
-   */
   public function userLogin($email, $password) {
     global $pdoConnection;
     $sql = "SELECT * FROM users WHERE user_email = :user_email AND user_password = :user_password";
@@ -17,20 +14,11 @@ class Users {
 		$sql->execute();
 		
     if($sql->rowCount() > 0) {
-      echo 'ok';
       $data = $sql->fetch();
-      $_SESSION['userid'] = $data['user_id'];
       $username = explode(" ", $data['user_name']);
-      $this->name = strtoupper($username[0]);
+      $_SESSION['userid'] = strtoupper($username[0]);
 			header("Location: ../../public/index.php");
     }
-  }
-
-  /**
-   * Get the user name
-   */
-  public function getName() {
-    return $this->name;
   }
 }
 ?>

@@ -4,7 +4,8 @@ USE system_management;
 CREATE TABLE invoices (
   inv_id INT AUTO_INCREMENT NOT NULL,
   inv_unidade VARCHAR(50),
-  inv_mes_referencia DATE,
+  inv_mes_referencia VARCHAR(50),
+  inv_ano_referencia VARCHAR(50),
   inv_identificacao VARCHAR(20),
   inv_vencimento DATE,
   inv_consumo_eletricidade_pta FLOAT(20),

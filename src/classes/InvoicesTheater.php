@@ -1,7 +1,7 @@
 <?php
 require_once '../controllers/config.php';
 
-class Invoices {
+class InvoicesTheater {
 
   private $refMonth = array();
   private $totalValue = array();
@@ -20,6 +20,8 @@ class Invoices {
       }
     }
   }
+
+  
 
   public function getRefMonth() {
     return $this->refMonth;

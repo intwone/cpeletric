@@ -73,7 +73,7 @@
 
         <div class="monthly">
           <div class="monthly-iconC"><i class="fa fa-dollar-sign"></i></div>
-          <div class="monthly-valueC" style="margin-left: 23px;">R$ 4000,00</div>
+          <div class="monthly-valueC" style="margin-left: 23px;">R$ <?php echo $value; ?></div>
         </div>
 
         <div class="yearly">
@@ -83,7 +83,7 @@
           
           <div class="monthly">
             <div class="monthly-iconC"><i class="fa fa-clock"></i></div>
-            <div class="monthly-valueC">R$ 4000,00</div>
+            <div class="monthly-valueC"> R$ 4000,00</div>
           </div>
         </div>  
       </div>
@@ -95,7 +95,7 @@
 
         <div class="monthly">
           <div class="monthly-iconD"><i class="fa fa-dollar-sign"></i></div>
-          <div class="monthly-valueD" style="margin-left: 23px;">R$ 4000,00</div>
+          <div class="monthly-valueD" style="margin-left: 23px;">R$ <?php echo $average; ?></div>
         </div>
 
         <div class="yearly">

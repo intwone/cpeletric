@@ -1,15 +1,19 @@
 <?php 
 session_start();
 require_once '../classes/Users.php';
-require_once '../classes/Invoices.php';
+require_once '../classes/InvoicesTheater.php';
+require_once '../classes/InvoicesAll.php';
 
-$invoices = new Invoices();
+$invoices = new InvoicesTheater();
 $invoices->amountSpentPerMonth();
 $refMonth = json_encode($invoices->getRefMonth());
 $totalValue = json_encode($invoices->getTotalValue());
 
-$user = new Users();
-$name = $user->getName();
+$invoicesAll = new InvoicesAll();
+$invoicesAll->valueTotalInvoices();
+$invoicesAll->averageTotalValue();
+$value = number_format($invoicesAll->getTotalValue(), 2, ",", ".");
+$average = number_format($invoicesAll->getInvoicesAverage(), 2, ",", ".");
 ?>
 
 <!DOCTYPE html>
@@ -18,25 +22,25 @@ $name = $user->getName();
 	<title>CP ELECTRIC HOME</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="../assets/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
+  <!--===============================================================================================-->	
+  <link rel="icon" type="image/png" href="../assets/images/icons/favicon.ico"/>
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
+  <!--===============================================================================================-->	
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/css-hamburgers/hamburgers.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/select2/select2.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/util.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/header.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/content-dashboard.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/all.min.css"> 
-<!--===============================================================================================-->
+  <!--===============================================================================================-->
 </head>
 <body>
 
@@ -78,7 +82,7 @@ $name = $user->getName();
                   <i class="fa fa-hand-holding-usd"></i>
                   </span>
                 </div>
-                <div class="items">OPORTUNIDADES</div>
+                <div class="items">NOTIFICAÇÕES</div>
               </div>
             </a>
           </li>
@@ -130,7 +134,7 @@ $name = $user->getName();
                 <i class="fa fa-user"></i>
               </span>
             </div>
-            <div class="username"><?php echo $name; ?></div>
+            <div class="username"><?php echo $_SESSION['userid']; ?></div>
             <a href="logout.php">
               <div class="arrow-icon">
                 <span style="font-size: 17px; color: #fff;">
